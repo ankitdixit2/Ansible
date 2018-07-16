@@ -1,8 +1,8 @@
 node {
     checkout scm
     stage('build') {
-        /* Test docker  compose 
-            sh "docker-compose build" */         
+        /* Create docker swarm */
+            sh "ansible-playbook -i inventory/hosts playbooks/swarmcluster.yml"          
             
     }
 }

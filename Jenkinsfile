@@ -2,7 +2,7 @@ node {
     checkout scm
     stage('build') {
         /* Create docker swarm */
-            sh "sudo ansible-playbook -i /etc/ansible/inventory/hosts /etc/ansible/playbooks/eia-swarmcluster.yml"  
+            sh "ansible-playbook -i /etc/ansible/inventory/hosts /etc/ansible/playbooks/eia-swarmcluster.yml"  
         /* dir ('/etc/ansible') {
     sh 'pwd'
 } */

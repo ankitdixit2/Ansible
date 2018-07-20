@@ -12,7 +12,7 @@ node {
     stage('build') {
         /* Create docker swarm */
          // sh "sudo ansible-playbook -i /etc/ansible/inventory/hosts /etc/ansible/playbooks/eia-swarmcluster.yml" 
-            sh "sudo ansible-playbook /etc/ansible/eia-start-consulagent-registrator.yml"
+            sh "sudo ansible-playbook /etc/ansible/playbooks/eia-start-consulagent-registrator.yml"
             sh "sudo ansible-playbook /etc/ansible/playbooks/eia-swarmcluster.yml"
         /* dir ('/etc/ansible') {
     sh 'pwd'
